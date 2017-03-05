@@ -1,2 +1,4 @@
 # Falcon_Tools
-Just a collection of random things I made for helping me with Falcon
+The Falcon Programming lanuage is a multi-paradigm language. 
+
+These tools are very simple and basic, but will grow in complexity as the language grows and as I learn it.
