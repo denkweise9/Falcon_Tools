@@ -92,10 +92,9 @@ function read_file(file) //  This works " read_file("/home/user/Desktop/Perl_exp
     file_data.close()
     return argd()
 end
-
-
-
-    
+ 
+// use FILE_EXCLUSIVE if you want the function to have ownership of the file
+ 
 function ReadIO(stream)  // This needs improvment and will not run without elevated privlages
     line_number = 0
     stream_data = IOStream( stream, FILE_SHARE_READ ) // We use FILE_SHARE_READ because we only want to alter the data, not inject input
@@ -107,10 +106,31 @@ function ReadIO(stream)  // This needs improvment and will not run without eleva
     return argd()
 end
     
+// if you prefer linux comands like me, these will be useful to you
+function dir()
+    return dirCurrent()
+end
+pwd = dir()
+
+function cd(path)
+    return dirChange(path)
+end
+
+function mkdir(name, path) // path = where you put this folder, name is the name of folder
+    return dirMake(name, path)
+end
     
 function curl(url)
     data = curl.dload( str(url) )
     return data
+end
+
+function rm(dir)
+    return dirRemove(dir)
+end
+
+function chmod(file, mode)
+    return fileChmod(file, mode)
 end
     
 
