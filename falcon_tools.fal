@@ -27,6 +27,8 @@
 
 print('h'); printl("ey, welcome to the Falcon Programming Language")  // It's a joke.
 
+/* Basic Tools */
+
 function iterl(obj)  // this makes a new line after each iter item
     for each in obj
         printl(each)
@@ -61,20 +63,6 @@ function exp(x,y)
 end
 
 
-
-
-function get_interest()
-    > "Enter the interest rate, per year "
-    interest = float( input() )
-    > "Enter the amount to apply interest to "
-    amount = float( input() )
-    > "Enter the number of years to apply interest"
-    years = int( input() )
-    
-    total = (((interest * amount) * years) + amount )
-    return total
-end
-
 //  http://www.falconpl.org/project_docs/core/core_Stream.html
 
 function read_file(file)
@@ -93,6 +81,20 @@ end
 function IO(stream)
     stream_data = IOStream( stream, FILE_SHARE_READ )
     
+                                     /* Functions for errands in life  */
+                                     
+function get_interest()
+    > "Enter the interest rate, per year "
+    interest = float( input() )
+    > "Enter the amount to apply interest to "
+    amount = float( input() )
+    > "Enter the number of years to apply interest"
+    years = int( input() )
+    
+    total = (((interest * amount) * years) + amount )
+    return total
+end
+
 
 function get_tax()
     >> "Enter the price: > "
@@ -114,11 +116,19 @@ function get_tax()
     printl("The total will be ", total)
     
 
+/* Random */
+
+function roulette()
+    iff ( random() > 0.5, .[lit.[printl "BANG!"]], .[ lit.[printl "safe"]]) ()
+end
+
+/* The code below is designed for non-programmers, basically it will ask the user what he/she
+// wants to do. Then will call functions that ask for input, and will call these functions on that input
+*/
 
 options = [ "get_tax", "iter", "iterl" ]
 
-// More "practical" functions for networking and system admin will be added as Falcon Feathers grow
-// Falcon Feathers is a library for the Falcon Programming Language
+
 function Toolbox()
     printl("What would you like to do? Here are your options: ")
     iter(options)
@@ -126,12 +136,12 @@ function Toolbox()
     switch choice
         case nil
             printl("You want to do nothing? ")
+        case "get_tax"
+        
         default
             printl("You did not use one of the choices provided")
 
     end
-
-
-
-
+// More "practical" functions for networking and system admin will be added as Falcon Feathers grow
+// Falcon Feathers is a library for the Falcon Programming Language
 end
