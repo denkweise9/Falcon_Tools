@@ -26,7 +26,13 @@
 */
 
 // if you don't have the curl module, comment this out.
+
 import from curl
+
+load socket
+load threading
+load process
+load compiler
 
 print('h'); printl("ey, welcome to the Falcon Programming Language")  // It's a joke.
 
@@ -65,7 +71,15 @@ function exp(x,y)
     return (x**y)
 end
 
+function list(x)
+    return [x]
+end
 
+function listeach(x)
+    for each in x
+        return [each]
+    end
+end
 //  http://www.falconpl.org/project_docs/core/core_Stream.html
 
 function read_file(file) //  This works " read_file("/home/user/Desktop/Perl_experiment.pl") "
@@ -79,6 +93,8 @@ function read_file(file) //  This works " read_file("/home/user/Desktop/Perl_exp
     return argd()
 end
 
+
+
     
 function ReadIO(stream)  // This needs improvment and will not run without elevated privlages
     line_number = 0
@@ -91,10 +107,17 @@ function ReadIO(stream)  // This needs improvment and will not run without eleva
     return argd()
 end
     
+    
 function curl(url)
     data = curl.dload( str(url) )
     return data
 end
+    
+
+//classes here
+
+
+//singleton objects here
     
                                      /* Functions for errands in life  */
                                      
