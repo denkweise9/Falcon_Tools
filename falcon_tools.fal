@@ -6,9 +6,9 @@
 
 /*
     Falcon_Tools.fal is a module to contain helpful functions
-    Falcon is a new multi-paradigm language:
-    http://www.falconpl.org/
-    Copyright (C) 2017                     Authors: Denkweise9
+    Falcon is a new multi-paradigm GNU programming language.
+    http://www.falconpl.org/ for more information.
+    Copyright (C) 2017     Authors: Denkweise9
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
