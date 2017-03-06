@@ -69,7 +69,25 @@ function get_interest()
     years = int( input() )
     
     total = (((interest * amount) * years) + amount )
+    return total
 end
+
+//  http://www.falconpl.org/project_docs/core/core_Stream.html
+function read_file(file)
+    line_number = 0
+    file_data = InputStream( file, FILE_SHARE_READ )
+    while(line = file_data.grabLine()) != 0
+        > "Line:", line_number, " ", line
+        line_number += 1
+    end
+    file_data.close()
+end
+
+//  This works  read_file("/home/user/Desktop/Perl_experiment.pl")
+    
+function IO(stream)
+    stream_data = IOStream( stream, FILE_SHARE_READ )
+    
 
 function get_tax()
     >> "Enter the price: > "
