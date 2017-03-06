@@ -85,6 +85,7 @@ function read_file(file)
         line_number += 1
     end
     file_data.close()
+    return argd()
 end
 
 //  This works  read_file("/home/user/Desktop/Perl_experiment.pl")
