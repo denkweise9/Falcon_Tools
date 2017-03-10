@@ -71,12 +71,10 @@ function exp(x,y)
     return (x**y)
 end
 
-function list(x)
-    return [x]
-end
+
 
 function listeach(x)
-    for each in x
+    for each in [x]
         return [each]
     end
 end
