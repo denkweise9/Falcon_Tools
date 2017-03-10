@@ -92,7 +92,19 @@ function read_file(file) //  This works " read_file("/home/user/Desktop/Perl_exp
     file_data.close()
     return argd()
 end
- 
+
+//function assumes utf-8 but can be changed in function call
+//needs work
+function write_to_file(uri, data, encoding='utf-8')
+    line_number = 0
+    file = writeURI(uri, data, encoding)
+        for each line in file
+            line_number += 1
+        end
+    printl("Now writing data in utf-8")
+    return file
+end
+
 // use FILE_EXCLUSIVE if you want the function to have ownership of the file
  
 function ReadIO(stream)  // This needs improvment and will not run without elevated privlages
